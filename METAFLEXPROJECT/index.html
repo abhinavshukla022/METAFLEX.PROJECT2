@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>METAFLEX | The Ultimate Luxury Fitness </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&family=Syncopate:wght@400;700&display=swap');
+
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .heading-font {
+            font-family: 'Syncopate', sans-serif;
+            letter-spacing: -0.05em;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+            transform: translateY(-5px);
+        }
+
+  .neon-text {
+    background: linear-gradient(to right, #60a5fa, #2563eb);
+    
+    /* 1. Standard Property (Modern Browsers ke liye) */
+    background-clip: text; 
+    
+    /* 2. Webkit Prefix (Chrome, Safari, Edge ke liye) */
+    -webkit-background-clip: text; 
+    
+    /* 3. Text ko transparent karna zaroori hai taaki gradient dikhe */
+    -webkit-text-fill-color: transparent;
+    
+    text-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+        .glow-btn {
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+            transition: 0.3s;
+        }
+
+        .glow-btn:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+            transform: scale(1.05);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Swiper Custom Styling */
+        .swiper-slide {
+            transition: 0.4s ease;
+            filter: brightness(0.5);
+        }
+        .swiper-slide-active {
+            filter: brightness(1.1);
+            transform: scale(1.05);
+        }
+        .swiper-button-next, .swiper-button-prev { color: #3b82f6 !important; }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center bg-black/50 backdrop-blur-md">
+        <div class="text-2xl heading-font font-bold tracking-tighter">METAFLEX<span class="text-blue-500">.</span></div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-light">
+            <a href="#hero" class="hover:text-blue-400 transition">Home</a>
+            <a href="#facilities" class="hover:text-blue-400 transition">Facilities</a>
+            <a href="#trainers" class="hover:text-blue-400 transition">Trainers</a>
+            <a href="#pricing" class="hover:text-blue-400 transition">Membership</a>
+        </div>
+        <button class="bg-blue-600 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest glow-btn">Join Now</button>
+    </nav>
+
+    <section id="hero" class="h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-black to-black"></div>
+        <div class="relative z-10 text-center px-4">
+            <h1 class="text-6xl md:text-9xl heading-font font-bold mb-6 reveal">
+                LIMITLESS <br> <span class="neon-text">ELITE</span> FITNESS
+            </h1>
+            <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 reveal" style="transition-delay: 200ms;">
+                Experience the pinnacle of performance in an atmosphere of pure luxury. Our gym
+                 is designed for those who demand luxury and excellence.
+            </p>
+            <div class="reveal" style="transition-delay: 400ms;">
+                <a href="#pricing" class="px-10 py-4 bg-blue-600 rounded-full font-bold uppercase tracking-tighter text-lg glow-btn">Begin Your Legacy</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="facilities" class="py-24 px-8 max-w-7xl mx-auto">
+        <h2 class="text-4xl heading-font mb-16 reveal">PREMIUM <span class="text-blue-500">FACILITIES</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="glass-card p-8 rounded-2xl reveal">
+                <i class="fa-solid fa-bolt-lightning text-3xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Cardio Zone</h3>
+                <p class="text-gray-400 font-light leading-relaxed">State-of-the-art oxygen-enriched cardio suites with panoramic views.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 100ms;">
+                <i class="fa-solid fa-dumbbell text-3xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Heavy Weight Area</h3>
+                <p class="text-gray-400 font-light">Custom-forged equipment designed for maximum muscle recruitment.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl reveal" style="transition-delay: 200ms;">
+                <i class="fa-solid fa-hot-tub-person text-3xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Luxury Sauna</h3>
+                <p class="text-gray-400 font-light">Himalayan salt-infused infrared saunas for ultimate recovery.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl reveal">
+                <i class="fa-solid fa-water text-3xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Infinity Pool</h3>
+                <p class="text-gray-400 font-light">Temperature-controlled lap pool with magnesium-filtered water.</p>
+            </div>
+            <div class="glass-card p-8 rounded-2xl md:col-span-2 reveal" style="transition-delay: 150ms;">
+                <i class="fa-solid fa-mug-hot text-3xl text-blue-500 mb-6"></i>
+                <h3 class="text-xl font-bold mb-4">Premium Fuel Lounge</h3>
+                <p class="text-gray-400 font-light">Artisan coffee and organic protein bar for post-workout socializing.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-black overflow-hidden">
+        <div class="max-w-7xl mx-auto px-8 mb-12">
+            <h2 class="text-3xl heading-font reveal text-center">THE <span class="text-blue-500">VISUAL</span> EXPERIENCE</h2>
+        </div>
+        
+        <div class="swiper luxurySwiper reveal">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide glass-card rounded-3xl overflow-hidden aspect-video">
+                    <video autoplay muted loop class="w-full h-full object-cover">
+                        <source src="c:\Users\abhin\Downloads\videoplayback.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="swiper-slide glass-card rounded-3xl overflow-hidden aspect-video">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwerj0MJz1kKVRto6-jZhXRcMouKcmZAlcxLs6L4Kw_we4lgzB-JdCP_NVgAebfk1wr1fFyBOQ4EMoecCFeB9fMe693U1RgOnUNoyiWLb-xJlPGiIjYTdWbTf0MVcSNcPUgD7W-R8=s4000" class="w-full h-full object-cover" alt="Gym Interior">
+                </div>
+                <div class="swiper-slide glass-card rounded-3xl overflow-hidden aspect-video">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwepFiIfUORoFiw1deRW7Ph4bFbJ9tGJS9Gs61JM9DElWobudIynL0DPZOcWV2KIciS1KIJeFh1ihGAOLFVOnjBEiH_v4RswcRfhEMBIB4zBFORkzAM9Ym75gil_CZoSx4w3hc7gauw=s4000" class="w-full h-full object-cover" alt="Elite Equipment">
+                </div>
+                <div class="swiper-slide glass-card rounded-3xl overflow-hidden aspect-video">
+                    <img src="https://lh3.googleusercontent.com/p/AF1QipP_kBHjIDd1H9za1d8e-gDXvOAzwJ_2huj6-DjY=s4000" class="w-full h-full object-cover" alt="Elite Equipment">
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="trainers" class="py-24 bg-[#0a0a0a]">
+        <div class="max-w-7xl mx-auto px-8 text-center mb-16">
+            <h2 class="text-4xl heading-font mb-4 reveal">THE <span class="text-blue-500">EXPERTS</span></h2>
+            <p class="text-gray-500 reveal">Guided by world-class athletes and bio-mechanic specialists.</p>
+        </div>
+        <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div class="group reveal">
+                <div class="aspect-[3/4] bg-neutral-900 rounded-2xl mb-6 overflow-hidden border border-neutral-800">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAweqFjqYTKYraKmt_EAJ0xTU7lhalgvkNAjMkI3QoV7M_yd2tJRHDcYIVP95LA0vNUnT220ZrSbBp8x806V9r5Te33ewmpIdGu1jxdyQCNt49nDk2sQ-zq8hpc4RKmK_dJUP8W4iDDQaODEHe=s4000" alt="Trainer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <h4 class="text-xl font-bold uppercase tracking-wide"> DSSev thumar</h4>
+                <p class="text-blue-500 text-sm mb-2">Master Strength Coach</p>
+                <p class="text-gray-500 text-sm font-light">Former Olympian specializing in explosive power development.</p>
+            </div>
+            <div class="group reveal" style="transition-delay: 150ms;">
+                <div class="aspect-[3/4] bg-neutral-900 rounded-2xl mb-6 overflow-hidden border border-neutral-800">
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?auto=format&fit=crop&q=80&w=600" alt="Trainer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <h4 class="text-xl font-bold uppercase tracking-wide">XYZ</h4>
+                <p class="text-blue-500 text-sm mb-2">Aqua Aerobics Lead</p>
+                <p class="text-gray-500 text-sm font-light">Integrating fluid dynamics with HIIT for low-impact results.</p>
+            </div>
+            <div class="group reveal" style="transition-delay: 300ms;">
+                <div class="aspect-[3/4] bg-neutral-900 rounded-2xl mb-6 overflow-hidden border border-neutral-800">
+                    <img src="https://lh3.googleusercontent.com/gps-cs-s/AHVAwera9Z-ywMM11xP75qBbCVMeqKdIYqDq4RtN9gvIt7LUC9w9ceaGEciyxNEOxXWixNkvUSb1DrzTC8GJmRUHpeW8zPpdFRNVCaIlNBl0wktUiHX89AdkVyzSBoMv7sHAF5KnwqaVnJAnFPIf=s4000" alt="Trainer" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <h4 class="text-xl font-bold uppercase tracking-wide">Preetam Mehta</h4>
+                <p class="text-blue-500 text-sm mb-2">Bio-Mechanic Expert</p>
+                <p class="text-gray-500 text-sm font-light">Corrective exercise specialist focusing on longevity and posture.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 px-8 max-w-7xl mx-auto">
+        <h2 class="text-4xl heading-font mb-16 text-center reveal">CHOOSE YOUR <span class="text-blue-500">TIER</span></h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+            <div class="glass-card p-10 rounded-3xl reveal">
+                <h3 class="text-xl font-bold mb-2">BASIC</h3>
+                <div class="text-4xl font-black mb-6">₹15,000<span class="text-sm font-normal text-gray-500">/mo</span></div>
+                <ul class="space-y-4 mb-8 text-gray-400 text-sm">
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Gym Floor Access</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Locker Room Access</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> 2 Guest Passes/mo</li>
+                </ul>
+                <button class="w-full py-3 border border-blue-600 rounded-lg hover:bg-blue-600 transition font-bold uppercase text-xs">Select</button>
+            </div>
+            <div class="glass-card p-10 rounded-3xl scale-110 border-blue-500/50 shadow-[0_0_40px_rgba(37,99,235,0.2)] reveal" style="transition-delay: 150ms;">
+                <div class="bg-blue-600 text-[10px] font-black w-max px-3 py-1 rounded-full mb-4">MOST POPULAR</div>
+                <h3 class="text-xl font-bold mb-2">PRO</h3>
+                <div class="text-4xl font-black mb-6 text-blue-500">₹30,000<span class="text-sm font-normal text-gray-500">/mo</span></div>
+                <ul class="space-y-4 mb-8 text-sm">
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Everything in Basic</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Sauna & Spa Access</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> 4 PT Sessions/mo</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Free Protein Shake/Day</li>
+                </ul>
+                <button class="w-full py-3 bg-blue-600 rounded-lg glow-btn font-bold uppercase text-xs">Select</button>
+            </div>
+            <div class="glass-card p-10 rounded-3xl reveal" style="transition-delay: 300ms;">
+                <h3 class="text-xl font-bold mb-2">ELITE</h3>
+                <div class="text-4xl font-black mb-6">₹50,000<span class="text-sm font-normal text-gray-500">/mo</span></div>
+                <ul class="space-y-4 mb-8 text-gray-400 text-sm">
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Unlimited PT Access</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Private Suite Training</li>
+                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i> Laundry & Valet Service</li>
+                </ul>
+                <button class="w-full py-3 border border-blue-600 rounded-lg hover:bg-blue-600 transition font-bold uppercase text-xs">Select</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 border-t border-neutral-900 px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+            <div>
+                <div class="text-2xl heading-font font-bold mb-6">METAFLEX<span class="text-blue-500">.</span></div>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Uttar Pradesh 273015, <br>
+                    Beside Green valley apartment, 
+                    near Ramnagar chauraha, 
+                    Gorakhnath, GORAKHPUR <br>
+                    INDIA
+                </p>
+            </div>
+            <div class="text-sm">
+                <h5 class="font-bold mb-6 uppercase tracking-widest text-blue-500">Timings</h5>
+                <p class="text-gray-500 mb-2">Mon - Fri: 06:00 AM - 10:30 PM</p>
+                <p class="text-gray-500">Sat : 06:00 AM - 10:00 PM</p>
+            </div>
+            <div class="flex space-x-6 text-2xl justify-start md:justify-end">
+                <a href="https://www.instagram.com/metaflex.gym/" target="_blank" rel="noopener noreferrer" class="hover:text-blue-500 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-500 transition"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+        <div class="text-center mt-16 text-[10px] text-neutral-700 uppercase tracking-[0.3em]">
+            &copy; 2026 metaflex Luxury Fitness Group. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        // Swiper initialization
+        const swiper = new Swiper('.luxurySwiper', {
+            slidesPerView: 1.2,
+            centeredSlides: true,
+            spaceBetween: 30,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 }
+            }
+        });
+
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Hero Parallax
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelector('#hero').style.backgroundPositionY = scrolled * 0.5 + 'px';
+        });
+    </script>
+</body>
+</html>
